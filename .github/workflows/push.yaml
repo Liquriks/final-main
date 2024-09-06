@@ -3,6 +3,9 @@ name: golang-pipeline
 on: push
 
 jobs:
+  test:
+    rubs-on: ubuntu-lastest
+    container: golang:1.22
     steps:
       - uses: actions/checkout@v4
 
