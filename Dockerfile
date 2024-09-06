@@ -1,11 +1,11 @@
 FROM golang:1.22
 
-WORKDIR /final-main
+WORKDIR /app
 
 COPY . .
 
 RUN go mod download
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /final-main
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /github.com/liquriks/final-main
 
-CMD ["/final-main"]
+CMD ["/main"]
